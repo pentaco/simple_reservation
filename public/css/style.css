@@ -1,0 +1,116 @@
+html,
+body {
+  font-family: 'MPLUS1p', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  overflow: hidden;
+}
+html {
+  touch-action: manipulation;
+}
+
+:root {
+  --shadowDark: #D9DDE6;
+  --background: #fff;
+  --shadowLight: #EFF5FE;
+}
+
+body {
+  background: var(--background);
+}
+
+.hero-body {
+  justify-content: center;
+}
+
+.login {
+  border-radius: 25px;
+  padding: 1.5rem;
+  box-shadow: 8px 8px 15px var(--shadowDark), -8px -8px 15px var(--shadowLight);
+  min-width: 350px;
+}
+
+input {
+  background: var(--shadowDark) !important;
+}
+
+a {
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 32px;
+  font-weight: 800;
+}
+
+
+.level {
+  margin-top: 30px;
+}
+.level-item {
+  font-size: 16px;
+
+}
+
+.label {
+  font-size: 15px;
+  font-weight: 500 !important;
+}
+.label::before{
+  content: "- ";
+}
+.label::after{
+  content: " -";
+}
+
+.input.small {
+  width: 50px;
+}
+
+.file {
+  flex-grow: 5;
+  width: 100%;
+}
+
+/* 1番目のボタン */
+.buttons .sentimentButton:nth-child(1) {
+  background-color: #FFC857;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+/* 2番目のボタン */
+.buttons .sentimentButton:nth-child(2) {
+  background-color: #F29492;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+/* 3番目のボタン */
+.buttons .sentimentButton:nth-child(3) {
+  background-color: #647D8E;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+/* 4番目のボタン */
+.buttons .sentimentButton:nth-child(4) {
+  background-color: #A2D9CE;
+  color: #fff;
+}
+
+.end-input-field {
+  margin-bottom: 50px !important;
+}
+
+.modal-close{
+  border-radius: 50%;
+  border: solid;
+  color: #00D1B2;
+}
+.modal-close::after{
+  background-color: #00D1B2;
+}
+.modal-close::before{
+  background-color: #00D1B2;
+}
