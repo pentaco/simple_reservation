@@ -1,0 +1,74 @@
+@startuml yonde
+' hide the spot
+hide circle
+
+' avoid problems with angled crows feet
+skinparam linetype ortho
+
+
+entity "timeslot_statuses" as timeslot_statuses {
+  id
+  --
+  name
+  created_at
+  updated_at
+}
+
+entity "users" as users {
+  id
+  --
+  name
+  email
+  email_verified_at
+  password
+  remember_token
+  created_at
+  updated_at
+  deleted_at
+}
+
+entity "timetables" as timetables {
+  id
+  --
+  start
+  end
+  created_at
+  updated_at
+}
+
+entity "timeslots" as timeslots {
+  id
+  --
+  status_id<<FK>>
+  timetable_id<<FK>>
+  date
+  created_at
+  updated_at
+}
+
+entity "reservations" as reservations {
+  id
+  --
+  customer_name
+  email
+  number_of_people
+  code
+  created_at
+  updated_at
+}
+
+entity "reservations_timeslots" as reservations_timeslots {
+  id
+  --
+  reservation_id<<FK>>
+  timeslot_id<<FK>>
+  created_at
+  updated_at
+}
+
+
+timetables ||--o{ timeslots
+timeslot_statuses ||--o{ timeslots
+reservations_timeslots ||--|| timeslots
+reservations_timeslots }|--|| reservations
+@enduml
