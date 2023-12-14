@@ -9,8 +9,9 @@ class Timeslot extends Model
 {
     use HasFactory;
     protected $fillable =[
-        'status_id',
-        'timetable_id',
         'date',
+        'table_id',
+        'timetable_id',
+        'timeslot_status_id',
     ];
 }
