@@ -14,9 +14,10 @@ return new class extends Migration
     {
         Schema::create('timeslots', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('timeslot_status_id')->default(TimeslotStatus::VACANT);
-            $table->foreignId('timetable_id')->default(null)->nullable();
             $table->date('date');
+            $table->foreignId('table_id')->default(null)->nullable();
+            $table->foreignId('timetable_id')->default(null)->nullable();
+            $table->foreignId('timeslot_status_id')->default(TimeslotStatus::VACANT);
             $table->timestamps();
         });
     }

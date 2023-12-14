@@ -5,13 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Timeslot extends Model
+class Table extends Model
 {
     use HasFactory;
     protected $fillable =[
-        'date',
-        'table_id',
-        'timetable_id',
-        'timeslot_status_id',
+        'name',
     ];
 }
