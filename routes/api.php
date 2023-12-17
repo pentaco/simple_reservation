@@ -2,8 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Api\StoreReservationController;
-use App\Http\Controllers\Api\CancelReservationController;
+use App\Http\Controllers\api\StoreReservationController;
+use App\Http\Controllers\api\CancelReservationController;
 
 /*
 |--------------------------------------------------------------------------
