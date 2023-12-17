@@ -26,4 +26,8 @@ class Timeslot extends Model
     {
         return $this->belongsTo(Timetable::class);
     }
+    public function reservations()
+    {
+        return $this->belongsToMany(Reservation::class, 'reservations_timeslots');
+    }
 }

@@ -12,4 +12,12 @@ class Timetable extends Model
         'start',
         'end',
     ];
+
+    //
+    // クエリースコープ
+    //---------------------------------------------
+    public function scopeCurrent($query)
+    {
+        return $query->where('version', config('settings.timetable_version'));
+    }
 }

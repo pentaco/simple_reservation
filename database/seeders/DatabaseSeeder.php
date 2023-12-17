@@ -13,6 +13,7 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         $this->call(TimeslotStatusSeeder::class);
+        $this->call(ReservationStatusSeeder::class);
         $this->call(TimetableSeeder::class);
         $this->call(TableSeeder::class);
         $this->call(UserSeeder::class);

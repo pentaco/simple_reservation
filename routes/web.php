@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\WebReservationController;
+use App\Http\Controllers\Web\HomeController;
+use App\Http\Controllers\Web\WebShowReservationController;
+use App\Http\Controllers\Web\WebCreateReservationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +16,9 @@ use App\Http\Controllers\WebReservationController;
 |
 */
 
-Route::get('/', WebReservationController::class)->name('reservation');
+Route::get('/', HomeController::class)->name('home');
+Route::get('/reserve', WebCreateReservationController::class)->name('reservation.create');
+Route::get('reservation', WebShowReservationController::class)->name('reservation.show');
 
 
 
