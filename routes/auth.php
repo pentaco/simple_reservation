@@ -39,7 +39,7 @@ Route::middleware('guest')->group(function () {
 
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', function () {
-        return view('dashboard');
+        return redirect(route('timeslot.create'));
     })->name('dashboard');
     Route::prefix('timeslot')->name('timeslot.')->group(function() {
         Route::get('/create', CreateTimeslotController::class)->name('create');
@@ -66,4 +66,7 @@ Route::middleware('auth')->group(function () {
 
     Route::post('logout', [AuthenticatedSessionController::class, 'destroy'])
                 ->name('logout');
+    Route::get('logout', [AuthenticatedSessionController::class, 'destroy']);
+
 });
+

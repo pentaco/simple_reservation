@@ -14,4 +14,20 @@ class Timeslot extends Model
         'timetable_id',
         'timeslot_status_id',
     ];
+
+    //
+    // リレーション
+    //-----------------------------------------------
+    public function table()
+    {
+        return $this->belongsTo(Table::class);
+    }
+    public function timetable()
+    {
+        return $this->belongsTo(Timetable::class);
+    }
+    public function reservations()
+    {
+        return $this->belongsToMany(Reservation::class, 'reservations_timeslots');
+    }
 }

@@ -11,15 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('reservations', function (Blueprint $table) {
+        Schema::create('reservation_statuses', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('reservation_status_id')->default(1);
-            $table->string('customer_name');
-            $table->string('email');
-            $table->string('tel');
-            $table->tinyInteger('number_of_people');
-            $table->text('note');
-            $table->string('code');
+            $table->string('name');
             $table->timestamps();
         });
     }
@@ -29,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('reservations');
+        Schema::dropIfExists('reservation_statuses');
     }
 };
