@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Web\HomeController;
-use App\Http\Controllers\Web\WebShowReservationController;
-use App\Http\Controllers\Web\WebCreateReservationController;
+use App\Http\Controllers\web\HomeController;
+use App\Http\Controllers\web\WebShowReservationController;
+use App\Http\Controllers\web\WebCreateReservationController;
 
 /*
 |--------------------------------------------------------------------------
