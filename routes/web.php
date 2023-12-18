@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\web\HomeController;
+use App\Http\Controllers\web\WebShowReservationController;
+use App\Http\Controllers\web\WebCreateReservationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +16,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', HomeController::class)->name('home');
+Route::get('/reserve', WebCreateReservationController::class)->name('reservation.create');
+Route::get('reservation', WebShowReservationController::class)->name('reservation.show');
+
+
+
+
+
+require __DIR__.'/auth.php';
